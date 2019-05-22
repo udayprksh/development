@@ -1,0 +1,12 @@
+<!-- <div  #alert *ngIf="message" class="alert alert-success" role="alert" >
+    <button type="button" class="close" (click)="closeAlert()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{message.text}}
+</div> -->
+<div #alert *ngIf="message" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
+        <button type="button" class="close" (click)="closeAlert()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+        </button>
+    {{message.text}}
+</div> 
